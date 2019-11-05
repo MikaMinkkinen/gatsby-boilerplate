@@ -33,8 +33,9 @@ $baseline-monospace: 0.148;
   $baseline: $baseline-paragraph,
   $font-size: 1,
   $line-height: 2,
-  $leading-top: 3,
-  $leading-bottom: 1
+  $leading-top: 4,
+  $leading-bottom: 2,
+  $use-baseline-origin: true
 );
 
 /**
@@ -71,10 +72,10 @@ h6 {
 }
 
 h1 {
-  @include plumber($font-size: 3.052);
+  @include plumber($font-size: 3.052, $leading-top: 6, $leading-bottom: 3);
 }
 h2 {
-  @include plumber($font-size: 2.44);
+  @include plumber($font-size: 2.44, $leading-top: 5, $leading-bottom: 3);
 }
 h3 {
   @include plumber($font-size: 1.953);

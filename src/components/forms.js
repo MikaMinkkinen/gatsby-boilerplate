@@ -1,6 +1,6 @@
 import React from "react"
 
-const Forms = () => (
+const Form = () => (
   <section>
     <h1>Forms</h1>
     <form>
@@ -88,4 +88,4 @@ const Forms = () => (
   </section>
 )
 
-export default Forms
+export default Form

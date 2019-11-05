@@ -1,8 +1,8 @@
 import React from "react"
 
-const Typography = () => (
-  <section>
-    <h1>Pääotsikko h1</h1>
+const Typography = ({ emphasizeClass }) => (
+  <section class={emphasizeClass}>
+    <h1>Pääotsikko h1 {emphasizeClass}</h1>
     <p class="big">
       Jukolan talo, eteläisessä Hämeessä, seisoo erään mäen pohjoisella
       rinteellä, liki Toukolan kylää. Sen läheisin ym­päristö on kivinen tanner,
