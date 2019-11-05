@@ -1,7 +1,7 @@
 import React from "react"
 
 const Codebox = () => (
-  <div>
+  <article>
     <section>
       <h1>Code examples</h1>
       <code>
@@ -30,7 +30,7 @@ const Codebox = () => (
         </pre>
       </samp>
     </section>
-  </div>
+  </article>
 )
 
 export default Codebox

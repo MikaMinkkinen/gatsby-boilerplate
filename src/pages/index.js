@@ -1,5 +1,4 @@
 import React from "react"
-import { Link } from "gatsby"
 
 import Layout from "../components/layout"
 import Image from "../components/image"
@@ -17,60 +16,30 @@ const IndexPage = () => (
   <Layout>
     <SEO title="Home" />
 
-    <div>
-      <Typography />
-    </div>
+    <Typography />
 
-    <div>
+    <div className="col-2">
       <Typography emphasizeClass="muted" />
-    </div>
-
-    <div>
       <Typography emphasizeClass="high-emphasize" />
     </div>
 
-    <div>
-      <List />
-    </div>
+    <List />
+    <Form />
+    <Tables />
+    <Button />
+    <Codebox />
+    <Progressbar />
 
-    <div>
-      <Form />
-    </div>
+    <figure>
+      <img src="http://placekitten.com/g/2000/600" alt="Figure Example" />
+      <figcaption>
+        Photo of the sky at night. Original by{" "}
+        <a href="http://flickr.com/photos/heyitsadam/">@mrmrs</a>
+      </figcaption>
+    </figure>
 
-    <div>
-      <Button />
-    </div>
-
-    <div>
-      <Codebox />
-    </div>
-
-    <div>
-      <Progressbar />
-    </div>
-
-    <section>
-      <figure>
-        <img src="http://placekitten.com/g/960/320" alt="Figure Example" />
-        <figcaption>
-          Photo of the sky at night. Original by{" "}
-          <a href="http://flickr.com/photos/heyitsadam/">@mrmrs</a>
-        </figcaption>
-      </figure>
-    </section>
-
-    <div>
-      <Tables />
-    </div>
-
-    <div>
-      <Other />
-    </div>
-
-    <div style={{ maxWidth: `300px`, marginBottom: `1.45rem` }}>
-      <Image />
-    </div>
-    <Link to="/page-2/">Go to page 2</Link>
+    <Other />
+    <Image />
   </Layout>
 )
 

@@ -27,11 +27,38 @@ body {
   font-feature-settings: "kern", "liga", "clig", "calt";
 }
 main {
-  max-width: $maxwidth-text;
-  margin: auto;
 }
 
-article,
+.col-2 {
+  max-width: 1440px+32px;
+  margin: auto;
+  h1,
+  h2 {
+    grid-area: headline;
+  }
+  p {
+    grid-area: content;
+  }
+  @media screen and (min-width: map-get($grid-breakpoints, md)) {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+header {
+  background: $gray-03;
+  padding: 1rem;
+  a {
+    color: $gray-05;
+    text-decoration: none;
+    &:hover {
+      color: $gray-07;
+    }
+  }
+}
+img {
+  margin: auto;
+}
 aside,
 details,
 figcaption,
@@ -149,17 +176,6 @@ pre {
   overflow: auto;
   word-wrap: normal;
   padding: 1.45rem;
-}
-
-blockquote {
-  margin-left: 1.45rem;
-  margin-right: 1.45rem;
-  margin-top: 0;
-  padding-bottom: 0;
-  padding-left: 0;
-  padding-right: 0;
-  padding-top: 0;
-  margin-bottom: 1.45rem;
 }
 
 noscript {

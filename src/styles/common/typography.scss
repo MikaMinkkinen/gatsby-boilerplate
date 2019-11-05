@@ -9,8 +9,11 @@
 html {
   font-size: 100%;
   color: $gray-txt;
-  @media screen and (min-width: map-get($grid-breakpoints, md)) {
-    font-size: 100%;
+  @media screen and (min-width: map-get($grid-breakpoints, lg)) {
+    font-size: 105%;
+  }
+  @media screen and (min-width: map-get($grid-breakpoints, lg)) {
+    font-size: 110%;
   }
 }
 
@@ -31,11 +34,10 @@ $baseline-monospace: 0.148;
 @include plumber-set-defaults(
   $grid-height: 1rem,
   $baseline: $baseline-paragraph,
-  $font-size: 1,
+  $font-size: 1.1,
   $line-height: 2,
   $leading-top: 4,
-  $leading-bottom: 2,
-  $use-baseline-origin: true
+  $leading-bottom: 2
 );
 
 /**
@@ -55,6 +57,17 @@ h6 {
   font-weight: bold;
 }
 
+/**
+ * Helper classes
+ * 
+ * Play with these if you want to control text emphasize levels
+ * @examples:
+ * <h1 class="muted">Headline text</h1>
+ *  or wrap all text elements inside this helper like this:
+ * <div class="muted"><h1>Headline text</h1></div>
+ * or include it in scss:
+ * @extend .muted
+ */
 .muted {
   color: lighten($gray-txt, 70%);
   a {
@@ -65,14 +78,25 @@ h6 {
   color: $brand-primary;
 }
 .big {
-  font-size: 130%;
+  font-size: 135%;
 }
 .small {
-  @include plumber($font-size: 0.875, $line-height: 1);
+  @include plumber($font-size: 0.875, $line-height: 1, $leading-top: 0);
+}
+
+article {
+  max-width: $maxwidth-text;
+  margin: auto;
+  padding: 1rem;
 }
 
 h1 {
-  @include plumber($font-size: 3.052, $leading-top: 6, $leading-bottom: 3);
+  @include plumber(
+    $font-size: 3.052,
+    $leading-top: 6,
+    $leading-bottom: 3,
+    $line-height: 4
+  );
 }
 h2 {
   @include plumber($font-size: 2.44, $leading-top: 5, $leading-bottom: 3);
@@ -119,4 +143,11 @@ a {
   &:hover {
     outline-width: 0;
   }
+}
+
+/**
+ * Others
+ */
+blockquote {
+  padding: 5rem;
 }

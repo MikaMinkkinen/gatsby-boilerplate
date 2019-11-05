@@ -1,8 +1,8 @@
 import React from "react"
 
 const Typography = ({ emphasizeClass }) => (
-  <section class={emphasizeClass}>
-    <h1>Pääotsikko h1 {emphasizeClass}</h1>
+  <article class={emphasizeClass}>
+    <h1>h1 {emphasizeClass}</h1>
     <p class="big">
       Jukolan talo, eteläisessä Hämeessä, seisoo erään mäen pohjoisella
       rinteellä, liki Toukolan kylää. Sen läheisin ym­päristö on kivinen tanner,
@@ -104,20 +104,7 @@ const Typography = ({ emphasizeClass }) => (
       halkileikkaama monipolvisen ojan; ja runsaasti antoi se heiniä, ennenkuin
       joutui laitumeksi kylän karjalle.
     </p>
-
-    <article>
-      <h1>Article</h1>
-      <p>
-        Jukolan talo, eteläisessä Hämeessä, seisoo erään mäen pohjoisella
-        rinteellä, liki Toukolan kylää. Sen läheisin ym­päristö on kivinen
-        tanner, mutta alempana alkaa pellot, joissa,
-        <a href="https://google.com"> ennenkuin talo oli häviöön mennyt</a>,
-        aaltoili teräinen vilja. Peltojen alla on niittu, apilaäyräinen,
-        halkileikkaama monipolvisen ojan; ja runsaasti antoi se heiniä,
-        ennenkuin joutui laitumeksi kylän karjalle.
-      </p>
-    </article>
-  </section>
+  </article>
 )
 
 export default Typography
