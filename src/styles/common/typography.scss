@@ -8,6 +8,7 @@
 
 html {
   font-size: 100%;
+  color: $gray-txt;
   @media screen and (min-width: map-get($grid-breakpoints, md)) {
     font-size: 100%;
   }
@@ -32,12 +33,15 @@ $baseline-monospace: 0.148;
   $baseline: $baseline-paragraph,
   $font-size: 1,
   $line-height: 2,
-  $leading-top: 1,
-  $leading-bottom: 2
+  $leading-top: 3,
+  $leading-bottom: 1
 );
 
 /**
  * Headings
+ * 
+ * Type Scale: Major Second (1.250)
+ * https://medium.com/sketch-app-sources/exploring-responsive-type-scales-cf1da541be54
  */
 h1,
 h2,
@@ -48,48 +52,59 @@ h6 {
   font-family: $font-headline;
   text-rendering: optimizeLegibility;
   font-weight: bold;
-  color: $gray-txt;
 }
 
 .muted {
   color: lighten($gray-txt, 70%);
+  a {
+    color: lighten($gray-txt, 70%);
+  }
 }
-.high-emphasis {
-  color: darken($gray-txt, 15%);
+.high-emphasize {
+  color: $brand-primary;
 }
-.low-emphasis {
-  color: lighten($gray-txt, 35%);
+.big {
+  font-size: 130%;
+}
+.small {
+  @include plumber($font-size: 0.875, $line-height: 1);
 }
 
 h1 {
-  @include plumber($font-size: 2.25);
+  @include plumber($font-size: 3.052);
 }
 h2 {
-  @include plumber($font-size: 1.62);
+  @include plumber($font-size: 2.44);
 }
 h3 {
-  @include plumber($font-size: 1.38);
+  @include plumber($font-size: 1.953);
 }
 h4 {
-  @include plumber($font-size: 1);
+  @include plumber($font-size: 1.563);
 }
 h5 {
-  @include plumber($font-size: 0.85);
+  @include plumber($font-size: 1.25);
 }
 h6 {
-  @include plumber($font-size: 0.78);
+  @include plumber($font-size: 1);
+  text-transform: uppercase;
+  letter-spacing: 0.5;
 }
 
 /**
  * Paragraphs
  */
 p {
-  @include plumber();
+  @include plumber($leading-top: 0);
+}
+
+caption {
+  text-align: left;
 }
 
 b,
 strong {
-  font-weight: bold;
+  font-weight: bolder;
 }
 
 /**

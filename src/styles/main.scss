@@ -12,7 +12,11 @@
 @import "common/variables";
 @import "common/typography";
 @import "common/global";
-@import "common/forms";
 
+@import "components/forms";
+@import "components/tables";
+@import "components/codeboxes";
+@import "components/buttons";
+@import "components/progressbars";
 @import "components/header";
 @import "components/footer";

@@ -3,74 +3,32 @@ import { Link } from "gatsby"
 
 import Layout from "../components/layout"
 import Image from "../components/image"
+import Typography from "../components/typography"
+import Forms from "../components/forms"
+import Tables from "../components/tables"
+import Progressbar from "../components/progressbars"
+import Button from "../components/buttons"
+import Codebox from "../components/codeboxes"
 import SEO from "../components/seo"
 
 const IndexPage = () => (
   <Layout>
     <SEO title="Home" />
-    <section>
-      <h1>Headings &amp; Copy</h1>
-      <h1>Default Header h1</h1>
-      <h1 class="muted">Muted Header h1</h1>
-      <h1 class="high-emphasis">High Emphasis Header h1</h1>
-      <h1 class="low-emphasis">Low Emphasis Header h1</h1>
-      <h1>First Header h1</h1>
-      <p>
-        At vero eos et accusamus et iusto odio dignissimos ducimus qui
-        blanditiis praesentium voluptatum deleniti atque corrupti quos.
-      </p>
-      <h2>Second header h2</h2>
-      <p>
-        Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
-        tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim
-        veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea
-        commodo consequat. Duis aute irure dolor in reprehenderit in voluptate
-        velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint
-        occaecat cupidatat non proident, sunt in culpa qui officia deserunt
-        mollit anim id est laborum.
-      </p>
-      <h3>Third header h3</h3>
-      <p>
-        At vero eos et accusamus et iusto odio dignissimos ducimus qui
-        blanditiis praesentium voluptatum deleniti atque corrupti quos dolores
-        et quas molestias excepturi sint occaecati cupiditate non provident,
-        similique sunt in culpa qui officia deserunt mollitia animi, id est
-        laborum et dolorum fuga. Et harum quidem rerum facilis est et expedita
-        distinctio.
-      </p>
-      <h4>Fourth header h4</h4>
-      <p>
-        Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet,
-        consectetur, adipisci velit, sed quia non numquam eius modi tempora
-        incidunt ut labore et dolore magnam aliquam quaerat voluptatem. Ut enim
-        ad minima veniam, quis nostrum exercitationem ullam corporis suscipit
-        laboriosam, nisi ut aliquid ex ea commodi consequatur? Quis autem vel
-        eum iure reprehenderit qui in ea voluptate velit esse quam nihil
-        molestiae consequatur, vel illum qui dolorem eum fugiat quo voluptas
-        nulla pariatur?"
-      </p>
-      <h5>Fifth header h5</h5>
-      <p>
-        Sed ut perspiciatis unde omnis iste natus error sit voluptatem
-        accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab
-        illo inventore veritatis et quasi architecto beatae vitae dicta sunt
-        explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut
-        odit aut fugit, sed quia consequuntur magni dolores eos qui ratione
-        voluptatem sequi nesciunt.
-      </p>
-      <h6>Sixth header h6</h6>
-      <p>
-        At vero eos et accusamus et iusto odio dignissimos ducimus qui
-        blanditiis praesentium voluptatum deleniti atque corrupti quos.
-      </p>
-    </section>
+
+    <div>
+      <Typography />
+    </div>
+
+    <div class="high-emphasize">
+      <Typography />
+    </div>
+
+    <div class="muted">
+      <Typography />
+    </div>
+
     <hr />
-    <section>
-      <h1>Links</h1>
-      <a href="https://google.com">Sample text link</a>
-      <a href="https://google.com">Sample button link</a>
-    </section>
-    <hr />
+
     <section>
       <h1>Lists</h1>
       <h2>Unordered list</h2>
@@ -136,160 +94,22 @@ const IndexPage = () => (
       </dl>
     </section>
 
-    <section>
-      <h1>Forms</h1>
-      <form>
-        <fieldset>
-          <legend>Legend Example</legend>
+    <div>
+      <Forms />
+    </div>
 
-          <div>
-            <label>Text Input Label</label>
-            <input type="text" />
-            <p>Helper text if necessary.</p>
-          </div>
+    <div>
+      <Button />
+    </div>
 
-          <div>
-            <label>Password</label>
-            <input type="password" />
-            <p>Error messages when appropriate.</p>
-          </div>
+    <div>
+      <Codebox />
+    </div>
 
-          <div>
-            <label for="first-name">First Name</label>
-            <input type="text" id="first-name" />
-          </div>
-
-          <div>
-            <label for="last-name">Last Name</label>
-            <input type="text" id="last-name" />
-          </div>
-
-          <div>
-            <label for="email">Email</label>
-            <input type="email" id="email" />
-          </div>
-
-          <div>
-            <label for="gender">Dropdown</label>
-            <select>
-              <option>Option 1</option>
-              <option>Option 2</option>
-              <option>Option 3</option>
-            </select>
-          </div>
-
-          <div>
-            <label>Radio Buttons</label>
-            <ul>
-              <li>
-                <label>
-                  <input type="radio" /> Label 1
-                </label>
-              </li>
-              <li>
-                <label>
-                  <input type="radio" /> Label 2
-                </label>
-              </li>
-              <li>
-                <label>
-                  <input type="radio" /> Label 3
-                </label>
-              </li>
-            </ul>
-          </div>
-
-          <div>
-            <label for="url">URL Input</label>
-            <input type="url" placeholder="http://mrmrs.cc" />
-          </div>
-
-          <div>
-            <label>Text area</label>
-            <textarea></textarea>
-          </div>
-
-          <div>
-            <label>
-              <input type="checkbox" /> This is a checkbox.
-            </label>
-          </div>
-
-          <div>
-            <input type="submit" value="Submit" />
-          </div>
-        </fieldset>
-      </form>
-    </section>
-    <section>
-      <h1>Buttons</h1>
-      <button>A button</button>
-      <button>A button</button>
-      <button>A large button</button>
-    </section>
-    <hr />
-    <section>
-      <h1>An Example Article</h1>
-      <article>
-        <h1>Title</h1>
-        <p>
-          Lorem ipsum dolor sit amet, <b>consectetur adipisicing elit</b>, sed
-          do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim
-          ad minim veniam, quis nostrud{" "}
-          <em>
-            exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat
-          </em>
-          . Duis aute irure dolor in reprehenderit in voluptate velit esse
-          cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat
-          cupidatat non proident, sunt in culpa qui officia deserunt mollit anim
-          id est laborum.
-        </p>
-        <blockquote>
-          <p>This is a GREAT pull quote.</p>
-          <a href="https://google.com">- Author</a>
-        </blockquote>
-        <p>
-          Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet,
-          consectetur, adipisci velit, sed quia non numquam eius modi tempora
-          incidunt ut labore et dolore magnam aliquam quaerat voluptatem. Ut
-          enim ad minima veniam, quis nostrum exercitationem ullam corporis
-          suscipit laboriosam, nisi ut aliquid ex ea commodi consequatur? Quis
-          autem vel eum iure reprehenderit qui in ea voluptate velit esse quam
-          nihil molestiae consequatur, vel illum qui dolorem eum fugiat quo
-          voluptas nulla pariatur?"
-        </p>
-        <p>
-          At vero eos et accusamus et iusto odio dignissimos ducimus qui
-          blanditiis praesentium voluptatum deleniti atque corrupti quos dolores
-          et quas molestias excepturi sint occaecati cupiditate non provident,
-          similique sunt in culpa qui officia deserunt mollitia animi, id est
-          laborum et dolorum fuga. Et harum quidem rerum facilis est et expedita
-          distinctio.
-        </p>
-      </article>
-    </section>
-    <hr />
-
-    <section>
-      <h1>Code examples</h1>
-      <code>
-        <pre>
-          sudo ipfw pipe 1 config bw 256KByte/s sudo ipfw add 1 pipe 1 src-port
-          3000
-        </pre>
-      </code>
-    </section>
     <hr />
     <section>
       <h1>Footer</h1>
       <footer>
-        <p>
-          Copyright 2013. Made with love by{" "}
-          <a href="http://mrmrs.cc" title="MRMRS - Designer">
-            mrmrs
-          </a>
-          .
-        </p>
         <ul>
           <li>
             <a href="https://google.com">Home</a>
@@ -331,19 +151,9 @@ const IndexPage = () => (
       </footer>
     </section>
 
-    <section>
-      <h1>New hawtness</h1>
-      <progress value="80" max="100">
-        80 %
-      </progress>
-      <p>
-        We are this close to the goal:{" "}
-        <meter min="0" max="1000" value="824">
-          $824
-        </meter>
-        .
-      </p>
-    </section>
+    <div>
+      <Progressbar />
+    </div>
 
     <section>
       <header>
@@ -382,60 +192,11 @@ const IndexPage = () => (
       </figure>
     </section>
 
-    <section>
-      <samp>
-        <pre>
-          /Sites/html master ☠ ☢ $ <kbd>ls -gto</kbd>
-          total 104 -rw-r--r-- 1 10779 Jun 5 16:24 index.html -rw-r--r-- 1 1255
-          Jun 5 16:00 _config.yml drwxr-xr-x 11 374 Jun 5 15:57 _site -rw-r--r--
-          1 1597 Jun 5 14:16 README.md drwxr-xr-x 5 170 Jun 5 14:15 _sass
-          -rw-r--r-- 1 564 Jun 4 15:59 Rakefile drwxr-xr-x 6 204 Jun 4 15:59
-          _includes drwxr-xr-x 4 136 Jun 4 15:59 _layouts drwxr-xr-x 3 102 Jun 4
-          15:59 _resources drwxr-xr-x 3 102 Jun 4 15:59 css -rw-r--r-- 1 1977
-          Jun 4 15:59 favicon.icns -rw-r--r-- 1 6518 Jun 4 15:59 favicon.ico
-          -rw-r--r-- 1 1250 Jun 4 15:59 touch-icon-ipad-precomposed.png
-          -rw-r--r-- 1 2203 Jun 4 15:59 touch-icon-ipad-retina-precomposed.png
-          -rw-r--r-- 1 1046 Jun 4 15:59 touch-icon-iphone-precomposed.png
-          -rw-r--r-- 1 1779 Jun 4 15:59 touch-icon-iphone-retina-precomposed.png
-        </pre>
-      </samp>
-    </section>
-    <section>
-      <h1>Tables</h1>
+    <div>
+      <Tables />
+    </div>
 
-      <table>
-        <caption>This is a caption for a table</caption>
-        <thead>
-          <tr>
-            <th>ID</th>
-            <th>Name</th>
-            <th>Date</th>
-            <th>Address</th>
-          </tr>
-        </thead>
-        <tfoot>
-          <tr>
-            <td>Table footer info</td>
-          </tr>
-        </tfoot>
-        <tbody>
-          <tr>
-            <td>#999-32ac</td>
-            <td>First Name</td>
-            <td>13 May, 2013</td>
-            <td>999 Spruce Lane, Somewhere, CA 94101</td>
-          </tr>
-          <tr>
-            <td>#888-32dd</td>
-            <td>Sample Name</td>
-            <td>17 May, 1984</td>
-            <td>999 Spruce Lane, Somewhere, CA 94101</td>
-          </tr>
-        </tbody>
-      </table>
-    </section>
     <section>
-      <h1>Footer</h1>
       <footer>
         <small>© 2014 Some company name</small>
         <address>email@email.com</address>
