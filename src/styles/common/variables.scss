@@ -1,0 +1,70 @@
+/**
+ * Variables
+ *
+ * Common / Variables
+ *
+ * @since 1.0.0
+ */
+
+/**
+ * Brakepoints
+ */
+$content-xs: 320px;
+$content-sm: 480px;
+$content-md: 992px;
+$content-lg: 1280px;
+$content-xl: 1440px;
+
+$content-hd: 1920px;
+$content-4k: 3840px;
+
+$grid-breakpoints: (
+  xs: $content-xs,
+  sm: $content-sm,
+  md: $content-md,
+  lg: $content-lg,
+  xl: $content-xl,
+  hd: $content-hd,
+  4k: $content-4k,
+);
+
+$maxwidth-text: 960px;
+$maxwidth-content: 1440px;
+
+/**
+ * UI Grays
+ * Open Color Gray Scale
+ * https://yeun.github.io/open-color/#gray
+ */
+
+$gray-00: #f8f9fa;
+$gray-01: #f1f3f5;
+$gray-02: #e9ecef;
+$gray-03: #dee2e6;
+$gray-04: #ced4da;
+$gray-05: #adb5bd;
+$gray-06: #868e96;
+$gray-07: #495057;
+$gray-08: #343a40;
+$gray-09: #212529;
+
+/**
+ * Text, Background, Light & Dark tones
+ */
+$w: #fff;
+$b: #000;
+$gray-bg: #fafafa;
+$gray-txt: $gray-09;
+
+/**
+ * Colors
+ */
+$brand-primary: red;
+$brand-secondary: blue;
+
+/**
+ * UI-Colors
+ */
+$error: red;
+$warning: yellow;
+$info: blue;

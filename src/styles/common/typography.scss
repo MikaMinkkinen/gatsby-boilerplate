@@ -1,0 +1,106 @@
+/**
+ * Typography
+ *
+ * Common / Typography
+ *
+ * @since 1.0.0
+ */
+
+html {
+  font-size: 100%;
+  @media screen and (min-width: map-get($grid-breakpoints, md)) {
+    font-size: 100%;
+  }
+}
+
+/**
+ * Fonts & Baselines
+ */
+$font-headline: -apple-system, sans-serif;
+$font-paragraph: -apple-system, sans-serif;
+$font-monospace: -apple-system, sans-serif;
+
+$baseline-headline: 0.148;
+$baseline-paragraph: 0.158203;
+$baseline-monospace: 0.148;
+
+/**
+ * Plumber defaults
+ */
+@include plumber-set-defaults(
+  $grid-height: 1rem,
+  $baseline: $baseline-paragraph,
+  $font-size: 1,
+  $line-height: 2,
+  $leading-top: 1,
+  $leading-bottom: 2
+);
+
+/**
+ * Headings
+ */
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: $font-headline;
+  text-rendering: optimizeLegibility;
+  font-weight: bold;
+  color: $gray-txt;
+}
+
+.muted {
+  color: lighten($gray-txt, 70%);
+}
+.high-emphasis {
+  color: darken($gray-txt, 15%);
+}
+.low-emphasis {
+  color: lighten($gray-txt, 35%);
+}
+
+h1 {
+  @include plumber($font-size: 2.25);
+}
+h2 {
+  @include plumber($font-size: 1.62);
+}
+h3 {
+  @include plumber($font-size: 1.38);
+}
+h4 {
+  @include plumber($font-size: 1);
+}
+h5 {
+  @include plumber($font-size: 0.85);
+}
+h6 {
+  @include plumber($font-size: 0.78);
+}
+
+/**
+ * Paragraphs
+ */
+p {
+  @include plumber();
+}
+
+b,
+strong {
+  font-weight: bold;
+}
+
+/**
+ * Links
+ */
+a {
+  color: $brand-primary;
+  background-color: transparent;
+  -webkit-text-decoration-skip: objects;
+  &:active,
+  &:hover {
+    outline-width: 0;
+  }
+}

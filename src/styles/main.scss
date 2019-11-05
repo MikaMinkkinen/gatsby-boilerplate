@@ -1,0 +1,18 @@
+/**
+ * Main
+ *
+ * Styles for frontend.
+ *
+ * @since 1.0.0
+ */
+
+@import "normalize-scss";
+@import "node_modules/plumber-sass/plumber";
+@import "common/helpers";
+@import "common/variables";
+@import "common/typography";
+@import "common/global";
+@import "common/forms";
+
+@import "components/header";
+@import "components/footer";
