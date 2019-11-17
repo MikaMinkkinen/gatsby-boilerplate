@@ -8,32 +8,46 @@ const Form = () => (
         <fieldset>
           <legend>Legend Example</legend>
 
-          <div>
-            <label>Text Input Label</label>
-            <input type="text" />
-            <p>Helper text if necessary.</p>
+          <label for="inp" class="inp">
+            <input type="text" id="inp" placeholder="&nbsp;" />
+            <span class="textarea">Label</span>
+            <span class="border"></span>
+          </label>
+          <span class="helper">Helper text if necessary.</span>
+
+          <label for="inp" class="inp">
+            <input type="password" id="inp" placeholder="&nbsp;" />
+            <span class="textarea">Password</span>
+            <span class="border"></span>
+          </label>
+          <span class="error">Error messages when appropriate.</span>
+
+          <div className="col-2">
+            <div>
+              <label for="inp" class="inp">
+                <input type="text" id="first-name" placeholder="&nbsp;" />
+                <span class="textarea">First Name</span>
+                <span class="border"></span>
+              </label>
+              <span class="error">Error messages when appropriate.</span>
+            </div>
+
+            <div>
+              <label for="inp" class="inp">
+                <input type="text" id="last-name" placeholder="&nbsp;" />
+                <span class="textarea">Last Name</span>
+                <span class="border"></span>
+              </label>
+              <span class="error">Error messages when appropriate.</span>
+            </div>
           </div>
 
-          <div>
-            <label>Password</label>
-            <input type="password" />
-            <p>Error messages when appropriate.</p>
-          </div>
-
-          <div>
-            <label for="first-name">First Name</label>
-            <input type="text" id="first-name" />
-          </div>
-
-          <div>
-            <label for="last-name">Last Name</label>
-            <input type="text" id="last-name" />
-          </div>
-
-          <div>
-            <label for="email">Email</label>
-            <input type="email" id="email" />
-          </div>
+          <label for="inp" class="inp">
+            <input type="email" id="email" placeholder="&nbsp;" />
+            <span class="textarea">Email</span>
+            <span class="border"></span>
+          </label>
+          <span class="error">Error messages when appropriate.</span>
 
           <div>
             <label for="gender">Dropdown</label>

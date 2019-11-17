@@ -1,0 +1,27 @@
+/**
+ * Grid
+ *
+ * Common/Grid
+ *
+ * CSS Grid like this: https://css-tricks.com/snippets/css/complete-guide-grid/
+ * @since 1.0.0
+ */
+.basic-styles {
+  background: $gray-02;
+  border: 1px solid $gray-03;
+}
+.grid {
+  @include display-grid();
+  background: $gray-03;
+  border: 1px solid yellow;
+  margin-bottom: 16px;
+}
+
+.col__1 {
+  @extend .basic-styles;
+  @include grid-child(2, 6);
+}
+.col__2 {
+  @extend .basic-styles;
+  @include grid-child(6, 12);
+}

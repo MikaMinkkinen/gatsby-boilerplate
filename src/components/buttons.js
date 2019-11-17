@@ -6,7 +6,7 @@ const Button = () => (
       <h1>Buttons</h1>
       <button>A button</button>
       <button>A button</button>
-      <button>A large button</button>
+      <button class="cta">A large button</button>
     </article>
   </section>
 )
