@@ -4,12 +4,12 @@ import React from "react"
 
 const Header = ({ siteTitle }) => (
   <header>
-    <div class="logo">
+    <div className="logo">
       <h1>
         <Link to="/">{siteTitle}</Link>
       </h1>
     </div>
-    <div class="navi">
+    <div className="navi">
       <ul>
         <li>Article</li>
       </ul>

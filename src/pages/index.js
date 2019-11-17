@@ -1,4 +1,6 @@
 import React from "react"
+import { graphql } from "gatsby"
+import Img from "gatsby-image"
 
 import Layout from "../components/layout"
 import Image from "../components/image"
@@ -15,21 +17,24 @@ import SEO from "../components/seo"
 const IndexPage = () => (
   <Layout>
     <SEO title="Home" />
-
     <Typography />
+
+    {/* todo: https://www.gatsbyjs.org/packages/gatsby-image/ */}
+    <div>
+      <h1>Hello gatsby-image</h1>
+      {/* <Img fixed={data.file.childImageSharp.fixed} /> */}
+    </div>
 
     <div className="col-2">
       <Typography emphasizeClass="muted" />
       <Typography emphasizeClass="high-emphasize" />
     </div>
-
     <List />
     <Form />
     <Tables />
     <Button />
     <Codebox />
     <Progressbar />
-
     <figure>
       <img src="http://placekitten.com/g/2000/600" alt="Figure Example" />
       <figcaption>
@@ -37,7 +42,6 @@ const IndexPage = () => (
         <a href="http://flickr.com/photos/heyitsadam/">@mrmrs</a>
       </figcaption>
     </figure>
-
     <Other />
     <Image />
   </Layout>

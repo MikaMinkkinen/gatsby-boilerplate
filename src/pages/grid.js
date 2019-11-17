@@ -9,15 +9,15 @@ const IndexPage = () => (
 
     <h1>Grid</h1>
 
-    <div class="grid">
-      <div class="col__1">
+    <div className="grid">
+      <div className="col__1">
         <img src="https://placehold.it/900x1500" alt="" />
         <div className="test">
           <div className="test__1">eka</div>
           <div className="test__2">toka</div>
         </div>
       </div>
-      <div class="col__2">
+      <div className="col__2">
         1 - Jukolan talo, eteläisessä Hämeessä, seisoo erään mäen pohjoisella
         rinteellä, liki Toukolan kylää. Sen läheisin ym­päristö on kivinen
         tanner, mutta alempana alkaa pellot, joissa, ennenkuin talo oli häviöön
@@ -36,19 +36,8 @@ const IndexPage = () => (
       </div>
     </div>
 
-    <div class="grid-2">
-      <div class="col-1">1</div>
-      <div class="col-2">2</div>
-      <div class="col-3">3</div>
-      <div class="col-4">4</div>
-      <div class="col-5">5</div>
-      <div class="col-6">6</div>
-      <div class="col-7">7</div>
-      <div class="col-8">8</div>
-      <div class="col-9">9</div>
-      <div class="col-10">10</div>
-      <div class="col-11">11</div>
-      <div class="col-12">12</div>
+    <div className="grid-2">
+      <div className="col-1">1</div>
     </div>
   </Layout>
 )

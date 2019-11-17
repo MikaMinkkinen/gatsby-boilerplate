@@ -8,7 +8,7 @@
 
 /**
  * Display Grid
- * Browser compatibility and defalut caps
+ * @example: @include display-grid;
  */
 @mixin display-grid {
   display: -ms-grid;
@@ -20,11 +20,28 @@
 
 /**
  * Grid Child
- * Browser compatibility
+ * @example: @include grid-child(1, 12)
  */
 @mixin grid-child($col-start: 1, $col-end: 12) {
   -ms-grid-column: $col-start;
   -ms-grid-column-span: $col-end - $col-start;
   grid-column-start: $col-start;
   grid-column-end: $col-end;
+}
+
+/**
+ * Responsive Ratio
+ * @example: @include responsive-ratio(16,9);
+ */
+@mixin responsive-ratio($x, $y, $pseudo: false) {
+  $padding: unquote(($y / $x) * 100 + "%");
+  @if $pseudo {
+    &:before {
+      @include pseudo($pos: relative);
+      width: 100%;
+      padding-top: $padding;
+    }
+  } @else {
+    padding-top: $padding;
+  }
 }
