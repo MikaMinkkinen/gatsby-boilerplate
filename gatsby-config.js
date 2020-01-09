@@ -28,6 +28,26 @@ module.exports = {
         icon: `src/images/gatsby-icon.png`, // This path is relative to the root of the site.
       },
     },
+    {
+      resolve: "gatsby-transformer-remark",
+      options: {
+        plugins: [
+          {
+            resolve: "gatsby-remark-embed-gist",
+            options: {
+              // Optional:
+
+              // the github handler whose gists are to be accessed
+              username: "weirdpattern",
+
+              // a flag indicating whether the github default gist css should be included or not
+              // default: true
+              includeDefaultCss: true,
+            },
+          },
+        ],
+      },
+    },
     // this (optional) plugin enables Progressive Web App + Offline functionality
     // To learn more, visit: https://gatsby.dev/offline
     // `gatsby-plugin-offline`,

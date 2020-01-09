@@ -6,5 +6,16 @@
  * @since 1.0.0
  */
 footer {
-  @extend header;
+  @include display-grid();
+  height: 80px;
+  background: $gray-04;
+  color: $gray-07;
+  a {
+    color: $gray-07;
+    text-decoration: none;
+    &:hover {
+      color: $brand-primary;
+    }
+  }
+  align-items: center;
 }

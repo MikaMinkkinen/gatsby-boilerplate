@@ -1,14 +1,13 @@
 import React from "react"
 
 const Button = () => (
-  <section>
-    <article>
+  <article>
+    <section>
       <h1>Buttons</h1>
       <button>A button</button>
-      <button>A button</button>
       <button class="cta">A large button</button>
-    </article>
-  </section>
+    </section>
+  </article>
 )
 
 export default Button

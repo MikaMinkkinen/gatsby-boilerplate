@@ -6,18 +6,25 @@
  * @since 1.0.0
  */
 header {
-  @include display-grid();
-  align-items: end;
-  .logo {
-    @include grid-child(1, 5);
-  }
-  .navi {
-    @include grid-child(6, 13);
-    ul {
-      width: 100%;
-      list-style-type: none;
-      li {
-        display: inline;
+  &__main {
+    .logo {
+      @include grid-child(1, 5);
+    }
+    .mainmenu {
+      @include grid-child(6, 13);
+      ul {
+        width: 100%;
+        list-style-type: none;
+        li {
+          display: inline;
+        }
+      }
+      a {
+        color: $gray-05;
+        text-decoration: none;
+        &:hover {
+          color: $gray-07;
+        }
       }
     }
   }

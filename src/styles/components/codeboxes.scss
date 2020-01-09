@@ -5,3 +5,14 @@
  *
  * @since 1.0.0
  */
+code,
+pre {
+  color: $gray-07;
+  padding: 1rem;
+  background: $gray-01;
+  font-size: 0.8rem;
+  line-height: 1.2rem;
+}
+code {
+  display: inline-block;
+}

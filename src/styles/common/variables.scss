@@ -1,6 +1,5 @@
 /**
  * Variables
- *
  * Common / Variables
  *
  * @since 1.0.0
@@ -9,14 +8,12 @@
 /**
  * Brakepoints
  */
-$content-xs: 320px;
-$content-sm: 480px;
-$content-md: 992px;
-$content-lg: 1280px;
-$content-xl: 1440px;
-
-$content-hd: 1920px;
-$content-4k: 3840px;
+$content_xs: 360px;
+$content_sm: 480px;
+$content_md: 992px;
+$content_lg: 1280px;
+$content_xl: 1440px;
+$content_hd: 1920px;
 
 $grid-breakpoints: (
   xs: $content-xs,
@@ -25,11 +22,10 @@ $grid-breakpoints: (
   lg: $content-lg,
   xl: $content-xl,
   hd: $content-hd,
-  4k: $content-4k,
 );
 
-$maxwidth-text: 800px;
-$maxwidth-content: 1440px;
+$maxwidth-text: $content_md;
+$maxwidth-content: $content_xl;
 
 /**
  * UI Grays
@@ -49,6 +45,13 @@ $gray-08: #343a40;
 $gray-09: #212529;
 
 /**
+ * UI-Colors
+ */
+$error: red;
+$warning: yellow;
+$info: blue;
+
+/**
  * Text, Background, Light & Dark tones
  */
 $w: #fff;
@@ -58,13 +61,7 @@ $gray-txt: $gray-09;
 
 /**
  * Colors
+ * Pantone color ot the year  "Classic Blue"
  */
-$brand-primary: blue;
+$brand-primary: #0f4c81;
 $brand-secondary: green;
-
-/**
- * UI-Colors
- */
-$error: red;
-$warning: yellow;
-$info: blue;

@@ -1,0 +1,29 @@
+/**
+ * Header
+ *
+ * Components / Header
+ *
+ * @since 1.0.0
+ */
+.headertop {
+  @include display-grid();
+  background: $gray-02;
+  height: 80px;
+
+  &__logo {
+    @include grid-child(1, 1);
+    background: $w;
+  }
+
+  &__headline {
+    @include grid-child(2, 13);
+    h1 {
+      @include plumber(
+        $font-size: $scale-050,
+        $leading-top: 1,
+        $leading-bottom: 1,
+        $line-height: 2
+      );
+    }
+  }
+}

@@ -6,45 +6,69 @@
  * @since 1.0.0
  */
 
+/**
+ * Set up fluid text size
+ * https://css-tricks.com/simplified-fluid-typography/
+ */
 html {
-  font-size: 100%;
+  font-size: 16px;
   color: $gray-txt;
-  @media screen and (min-width: map-get($grid-breakpoints, lg)) {
-    font-size: 105%;
+}
+
+@media screen and (min-width: map-get($grid-breakpoints, xs)) {
+  html {
+    font-size: calc(16px + 2 * ((100vw - 320px) / 680));
   }
-  @media screen and (min-width: map-get($grid-breakpoints, lg)) {
-    font-size: 110%;
+}
+
+@media screen and (min-width: map-get($grid-breakpoints, lg)) {
+  html {
+    font-size: 18px;
   }
 }
 
 /**
- * Fonts & Baselines
+ * Set up Font Family and Plumber defaults
+ * see https://jamonserrano.github.io/plumber-sass/
  */
-$font-headline: -apple-system, sans-serif;
-$font-paragraph: -apple-system, sans-serif;
-$font-monospace: -apple-system, sans-serif;
+$font-headline: "Roboto", sans-serif;
+$font-paragraph: "Roboto", sans-serif;
+$font-monospace: "Roboto Mono", monospace;
 
-$baseline-headline: 0.148;
+$baseline-headline: 0.158203;
 $baseline-paragraph: 0.158203;
-$baseline-monospace: 0.148;
+$baseline-monospace: 0.158203;
 
-/**
- * Plumber defaults
- */
 @include plumber-set-defaults(
-  $grid-height: 1rem,
+  $grid-height: 0.5rem,
   $baseline: $baseline-paragraph,
-  $font-size: 1.1,
-  $line-height: 2,
-  $leading-top: 4,
-  $leading-bottom: 2
+  $font-size: 2,
+  $line-height: 3,
+  $leading-top: 8,
+  $leading-bottom: 4
 );
 
 /**
- * Headings
- * 
- * Type Scale: Major Second (1.250)
- * https://medium.com/sketch-app-sources/exploring-responsive-type-scales-cf1da541be54
+ * Define Typographic Scale
+ * Use @Major Second (1.125)
+ * See @ https://medium.com/sketch-app-sources/exploring-responsive-type-scales-cf1da541be54
+ * 1rem = 16px in smallest views
+ * 1rem = 18px in biggest views
+ * Plumber Font size is 0.5rem for better implementation of pixel grid
+ * Pixel grid 8x8 on smaller sizes
+ * Pixel grid 9x9 on bigger sizes
+ */
+$scale-070: 4.06; //8px or 9px * 4.06 = 32.48px - 36.54px
+$scale-060: 3.6; //8px or 9px * 3.6 = 28.8px - 32.4px
+$scale-050: 3.2; //8px or 9px * 3.2 = 25.6px - 28.8px
+$scale-040: 2.84; //8px or 9px * 2.84 = 22.72px - 25.56px
+$scale-030: 2.5; //8px or 9px * 2.5 = 20px - 22.5px
+$scale-020: 2.24; //8px or 9px * 2.24 = 17.92px - 20.16px
+$scale-010: 2; //8px or 9px * 2 = 16px - 18px
+$scale-005: 2; //8px or 9px * 2 = 12.8px - 14.4px
+
+/**
+ * All Heading settings
  */
 h1,
 h2,
@@ -55,72 +79,114 @@ h6 {
   font-family: $font-headline;
   text-rendering: optimizeLegibility;
   font-weight: bold;
-}
-
-/**
- * Helper classes
- * 
- * Play with these if you want to control text emphasize levels
- * @examples:
- * <h1 class="muted">Headline text</h1>
- *  or wrap all text elements inside this helper like this:
- * <div class="muted"><h1>Headline text</h1></div>
- * or include it in scss:
- * @extend .muted
- */
-.muted {
-  color: lighten($gray-txt, 70%);
-  a {
-    color: lighten($gray-txt, 70%);
-  }
-}
-.high-emphasize {
-  color: $brand-primary;
-}
-.big {
-  font-size: 135%;
-}
-.small {
-  @include plumber($font-size: 0.875, $line-height: 1, $leading-top: 0);
-}
-
-article {
-  max-width: $maxwidth-text;
-  margin: auto;
-  padding: 1rem;
+  letter-spacing: 0.2;
 }
 
 h1 {
   @include plumber(
-    $font-size: 3.052,
+    $font-size: $scale-070,
+    $leading-top: 8,
+    $leading-bottom: 4,
+    $line-height: 5
+  );
+  @media screen and (min-width: map-get($grid-breakpoints, md)) {
+    @include plumber(
+      $font-size: $scale-070,
+      $leading-top: 10,
+      $leading-bottom: 4,
+      $line-height: 5
+    );
+  }
+}
+h2 {
+  @include plumber(
+    $font-size: $scale-060,
     $leading-top: 6,
     $leading-bottom: 3,
     $line-height: 4
   );
-}
-h2 {
-  @include plumber($font-size: 2.44, $leading-top: 5, $leading-bottom: 3);
+  @media screen and (min-width: map-get($grid-breakpoints, md)) {
+    @include plumber(
+      $font-size: $scale-060,
+      $leading-top: 8,
+      $leading-bottom: 4,
+      $line-height: 5
+    );
+  }
 }
 h3 {
-  @include plumber($font-size: 1.953);
+  @include plumber(
+    $font-size: $scale-050,
+    $leading-top: 5,
+    $leading-bottom: 2,
+    $line-height: 4
+  );
+  @media screen and (min-width: map-get($grid-breakpoints, md)) {
+    @include plumber(
+      $font-size: $scale-050,
+      $leading-top: 7,
+      $leading-bottom: 2,
+      $line-height: 4
+    );
+  }
 }
 h4 {
-  @include plumber($font-size: 1.563);
+  @include plumber(
+    $font-size: $scale-040,
+    $leading-top: 5,
+    $leading-bottom: 2,
+    $line-height: 3
+  );
+  @media screen and (min-width: map-get($grid-breakpoints, md)) {
+    @include plumber(
+      $font-size: $scale-040,
+      $leading-top: 6,
+      $leading-bottom: 2,
+      $line-height: 3
+    );
+  }
 }
 h5 {
-  @include plumber($font-size: 1.25);
+  @include plumber(
+    $font-size: $scale-030,
+    $leading-top: 5,
+    $leading-bottom: 2,
+    $line-height: 3
+  );
+  @media screen and (min-width: map-get($grid-breakpoints, md)) {
+    @include plumber(
+      $font-size: $scale-030,
+      $leading-top: 6,
+      $leading-bottom: 2,
+      $line-height: 4
+    );
+  }
 }
 h6 {
-  @include plumber($font-size: 1);
   text-transform: uppercase;
   letter-spacing: 0.5;
+  @include plumber(
+    $font-size: $scale-020,
+    $leading-top: 5,
+    $leading-bottom: 2,
+    $line-height: 3
+  );
+  @media screen and (min-width: map-get($grid-breakpoints, md)) {
+    @include plumber(
+      $font-size: $scale-020,
+      $leading-top: 5,
+      $leading-bottom: 2,
+      $line-height: 3
+    );
+  }
 }
 
 /**
  * Paragraphs
  */
 p {
-  @include plumber($leading-top: 0);
+  @include plumber($leading-top: 0, $leading-bottom: 1);
+  hyphens: auto;
 }
 
 caption {
@@ -149,5 +215,23 @@ a {
  * Others
  */
 blockquote {
-  padding: 5rem;
+  font-weight: 600;
+  margin: 0;
+  padding: 1rem;
+  @include plumber(
+    $font-size: $scale-040,
+    $leading-top: 4,
+    $leading-bottom: 2,
+    $line-height: 3
+  );
+  small {
+    display: block;
+    color: $gray-05;
+    @include plumber(
+      $font-size: $scale-010,
+      $leading-top: 1,
+      $leading-bottom: 2,
+      $line-height: 2
+    );
+  }
 }

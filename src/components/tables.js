@@ -1,8 +1,8 @@
 import React from "react"
 
 const Tables = () => (
-  <section>
-    <article>
+  <article>
+    <section>
       <h1>Tables</h1>
 
       <table>
@@ -35,8 +35,8 @@ const Tables = () => (
           </tr>
         </tbody>
       </table>
-    </article>
-  </section>
+    </section>
+  </article>
 )
 
 export default Tables
