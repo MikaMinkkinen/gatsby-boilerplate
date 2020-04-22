@@ -88,32 +88,7 @@ const Typography = ({ emphasizeClass }) => (
         mukainen asteikko ja pienillä kooilla <strong>Major Third</strong>{" "}
         mukainen asteikko.
       </p>
-      <figure>
-        <pre>
-          <code>
-            // Major Second (1.125) on mobile {<br />}
-            $scale-06: 2.03; //16px * 2.03 = 32,48px {<br />}
-            $scale-05: 1.8; //16px * 1.8 = 28.2px {<br />}
-            $scale-04: 1.6; //16px * 1.6 = 25,6px {<br />}
-            $scale-03: 1.424; //16px * 1.424 = 22.784px {<br />}
-            $scale-02: 1.265; //16px * 1.265 = 20,24px {<br />}
-            $scale-01: 1.125; //16px * 1.125 = 18px {<br />}
-            {<br />}
-            // Major Third (1.250) on desktop {<br />}
-            @media screen and (min-width: map-get($grid-breakpoints, md)) {
-              "{"
-            }{" "}
-            {<br />}
-            $scale-06: 3.248; //16px * 3.248 = 51,962px {<br />}
-            $scale-05: 3.052; //16px * 1.25 = 48.832px {<br />}
-            $scale-04: 2.44; //16px * 2.44 = 39.04px {<br />}
-            $scale-03: 1.953; //16px * 1.953 = 31.248px {<br />}
-            $scale-02: 1.563; //16px * 1.563 = 25.08px {<br />}
-            $scale-01: 1.25; //16px * 1.25 = 20px {<br />}
-            {"}"}
-          </code>
-        </pre>
-      </figure>
+
       <h2>Leipäteksti</h2>
       <p>
         Leipätekstin tulee mukautua näyttökokoihin niin että rivin pituus pysyy
@@ -133,36 +108,7 @@ const Typography = ({ emphasizeClass }) => (
         minimi ja maksimikirjainkoot näytönleveyden mukaan.
       </p>
       <figure>
-        <pre>
-          <code>
-            /** {<br />}* Fluid text size {<br />}*
-            https://css-tricks.com/simplified-fluid-typography/ {<br />}
-            */
-            {<br />}
-            {<br />}
-            html {"{"} {<br />}
-            font-size: 16px;{<br />}
-            {"}"} {<br />}
-            {<br />}
-            @media screen and (min-width: map-get($grid-breakpoints, xs)) {
-              "{"
-            }{" "}
-            {<br />}
-            html {"{"} {<br />}
-            font-size: calc(16px + 2 * ((100vw - 320px) / 680)); {<br />}
-            {"}"} {<br />}
-            {"}"} {<br />}
-            {<br />}
-            @media screen and (min-width: map-get($grid-breakpoints, lg)) {
-              "{"
-            }{" "}
-            {<br />}
-            html {"{"} {<br />}
-            font-size: 18px; {<br />}
-            {"}"} {<br />}
-            {"}"} {<br />}
-          </code>
-        </pre>
+        <pre></pre>
       </figure>
 
       <h2>Napit ja linkkityylit</h2>

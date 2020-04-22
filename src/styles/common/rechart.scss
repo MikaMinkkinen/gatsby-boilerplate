@@ -1,0 +1,20 @@
+/**
+ * Typography
+ *
+ * Common / Typography-Graph
+ *
+ * @since 1.0.0
+ */
+
+.recharts-wrapper {
+  .recharts-default-tooltip {
+    opacity: 0.9;
+    margin: 8px;
+    p.recharts-tooltip-label {
+      color: #59606f;
+      margin-bottom: 8px !important;
+      border-bottom: 1px solid #dfe4ee;
+      padding: 4px 0;
+    }
+  }
+}

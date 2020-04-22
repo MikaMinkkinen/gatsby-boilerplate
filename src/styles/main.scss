@@ -7,19 +7,19 @@
  */
 
 @import "normalize-scss";
-@import "node_modules/plumber-sass/plumber";
-@import "common/helpers";
-@import "common/variables";
-@import "common/grid";
-@import "common/typography";
-@import "common/global";
+// @import "node_modules/plumber-sass/plumber";
+// @import "common/helpers";
+// @import "common/variables";
+// @import "common/grid";
+@import "common/rechart";
+// // @import "common/global";
 
-@import "components/forms";
-@import "components/headertop";
-@import "components/tables";
-@import "components/codeboxes";
-@import "components/buttons";
-@import "components/progressbars";
-@import "components/header";
-@import "components/footer";
-@import "components/lists";
+// @import "components/forms";
+// @import "components/headertop";
+// @import "components/tables";
+// @import "components/codeboxes";
+// @import "components/buttons";
+// @import "components/progressbars";
+// @import "components/header";
+// @import "components/footer";
+// @import "components/lists";

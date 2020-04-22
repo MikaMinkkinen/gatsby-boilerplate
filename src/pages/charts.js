@@ -11,8 +11,27 @@ import {
   LineChart,
 } from "recharts"
 
-import Layout from "../components/layout"
-import SEO from "../components/seo"
+import styled from "@emotion/styled"
+
+const GraphContainer = styled.div`
+  font-family: "IBM Plex Sans Condensed", sans-serif;
+  font-size: 14px;
+  line-height: 20px;
+  padding: 16px;
+`
+
+const brandGray = {
+  gray01: "rgb(246 247 250)",
+  gray02: "rgb(236 239 245)",
+  gray03: "rgb(223 228 238)",
+  gray04: "rgb(202 210 225)",
+  gray05: "rgb(178 187 206)",
+  gray06: "rgb(149 158 177)",
+  gray07: "rgb(114 123 140)",
+  gray08: "rgb(89 96 111)",
+  gray09: "rgb(66 72 84)",
+  gray10: "rgb(48 53 62)",
+}
 
 const data = [
   {
@@ -62,39 +81,73 @@ const data = [
 const SecondPage = () => (
   <article>
     <section>
-      <a href="https://recharts.org/en-US/api" target="_blank">
+      <a
+        href="https://recharts.org/en-US/api"
+        target="_blank"
+        rel="noopener noreferrer"
+      >
         https://recharts.org/en-US/api
       </a>
     </section>
+
     <hr />
-    <section>
-      <LineChart
-        width={730}
-        height={250}
-        data={data}
-        margin={{ top: 5, right: 30, left: 20, bottom: 5 }}
-      >
-        <CartesianGrid strokeDasharray="3 3" />
-        <XAxis dataKey="name" />
-        <YAxis />
-        <Tooltip />
+    <GraphContainer>
+      <LineChart width={730} height={350} data={data}>
+        <CartesianGrid stroke={brandGray.gray03} strokeDasharray="2 2" />
+        <XAxis
+          dataKey="name"
+          tick={{ fill: brandGray.gray08 }}
+          stroke={brandGray.gray08}
+        />
+        <YAxis stroke={brandGray.gray05} axisLine="false" />
+        <Tooltip
+          cursor={{ fill: brandGray.gray02 }}
+          labelStyle={{
+            color: brandGray.gray08,
+          }}
+          contentStyle={{
+            background: "#fff",
+            border: "1px solid rgb(236 239 245)",
+            boxShadow: "0px 10px 10px rgba(0, 0, 0, 0.15)",
+          }}
+          wrapperStyle={{
+            width: 160,
+            color: brandGray.gray08,
+          }}
+        />
+
         <Legend />
-        <Line type="monotone" dataKey="pv" stroke="#8884d8" />
-        <Line type="monotone" dataKey="uv" stroke="#82ca9d" />
+
+        <Line type="monotone" dataKey="pv" stroke="#5C7CFA" />
+        <Line type="monotone" dataKey="uv" stroke="#22B8CF" />
       </LineChart>
-    </section>
+    </GraphContainer>
     <hr />
-    <section>
-      <BarChart width={730} height={250} data={data}>
-        <CartesianGrid strokeDasharray="3 3" />
-        <XAxis dataKey="name" />
-        <YAxis />
-        <Tooltip />
+    <GraphContainer>
+      <BarChart width={730} height={350} data={data}>
+        <CartesianGrid stroke={brandGray.gray03} strokeDasharray="2 2" />
+
+        <YAxis stroke={brandGray.gray05} />
+        <XAxis dataKey="name" stroke={brandGray.gray08} />
+
+        <Tooltip
+          cursor={{ fill: brandGray.gray02 }}
+          wrapperStyle={{
+            width: 160,
+            color: brandGray.gray08,
+          }}
+          contentStyle={{
+            background: "#fff",
+            border: "1px solid rgb(236 239 245)",
+            boxShadow: "0px 10px 10px rgba(0, 0, 0, 0.15)",
+          }}
+        />
+
         <Legend />
-        <Bar dataKey="pv" fill="#8884d8" />
-        <Bar dataKey="uv" fill="#82ca9d" />
+        <Bar dataKey="pv" fill="#5C7CFA" />
+        <Bar dataKey="uv" fill="#364FC7" barSize={3} />
       </BarChart>
-    </section>
+    </GraphContainer>
   </article>
 )
 

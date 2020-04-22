@@ -23,11 +23,6 @@ const Form = () => (
 
           <div className="col-2">
             <div>
-              <label for="id3" class="inp">
-                <input type="text" id="id3" placeholder="&nbsp;" />
-                <span class="textarea">First Name</span>
-                <span class="border"></span>
-              </label>
               <span class="error">Error messages when appropriate.</span>
             </div>
 
@@ -57,30 +52,21 @@ const Form = () => (
           </div>
 
           <div className="radiobuttons">
-            <label>Radiobuttons</label>
             <ul>
               <li>
                 <input type="radio" id="male" name="gender" value="male" />
-                <label for="male">
-                  <span></span>Male
-                </label>
               </li>
               <li>
                 <input type="radio" id="female" name="gender" value="female" />
-                <label for="female">
-                  <span></span>Female
-                </label>
               </li>
             </ul>
           </div>
 
           <div className="urlinput">
-            <label for="url">URL Input</label>
             <input type="url" placeholder="http://mrmrs.cc" />
           </div>
 
           <div className="textarea">
-            <label>Text area</label>
             <textarea></textarea>
           </div>
 
