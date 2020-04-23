@@ -18,6 +18,18 @@ const GraphContainer = styled.div`
   font-size: 14px;
   line-height: 20px;
   padding: 16px;
+  .recharts-default-tooltip {
+    opacity: 0.9;
+    margin: 8px;
+  }
+  p.recharts-tooltip-label {
+    color: #59606f;
+    margin-bottom: 8px !important;
+    border-bottom: 1px solid #dfe4ee;
+    padding: 4px 0;
+  }
+  .recharts-cartesian-grid {
+  }
 `
 
 const brandGray = {
@@ -125,7 +137,11 @@ const SecondPage = () => (
     <hr />
     <GraphContainer>
       <BarChart width={730} height={350} data={data}>
-        <CartesianGrid stroke={brandGray.gray03} strokeDasharray="2 2" />
+        <CartesianGrid
+          stroke={brandGray.gray03}
+          strokeDasharray="2 2"
+          vertical={false}
+        />
 
         <YAxis stroke={brandGray.gray05} />
         <XAxis dataKey="name" stroke={brandGray.gray08} />
