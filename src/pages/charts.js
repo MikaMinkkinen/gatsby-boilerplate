@@ -28,8 +28,6 @@ const GraphContainer = styled.div`
     border-bottom: 1px solid #dfe4ee;
     padding: 4px 0;
   }
-  .recharts-cartesian-grid {
-  }
 `
 
 const brandGray = {
