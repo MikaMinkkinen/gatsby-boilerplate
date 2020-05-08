@@ -9,6 +9,8 @@ import {
   Legend,
   Line,
   LineChart,
+  PieChart,
+  Pie,
 } from "recharts"
 
 import styled from "@emotion/styled"
@@ -88,6 +90,51 @@ const data = [
   },
 ]
 
+const data2 = [
+  {
+    name: "Page A",
+    uv: 2000,
+    pv: 3400,
+    amt: 4400,
+  },
+  {
+    name: "Page B",
+    uv: 1000,
+    pv: 1498,
+    amt: 9210,
+  },
+  {
+    name: "Page C",
+    uv: 3000,
+    pv: 9400,
+    amt: 1290,
+  },
+  {
+    name: "Page D",
+    uv: 2380,
+    pv: 3208,
+    amt: 1000,
+  },
+  {
+    name: "Page E",
+    uv: 1190,
+    pv: 4100,
+    amt: 1181,
+  },
+  {
+    name: "Page F",
+    uv: 2290,
+    pv: 1800,
+    amt: 2300,
+  },
+  {
+    name: "Page G",
+    uv: 3090,
+    pv: 1300,
+    amt: 1100,
+  },
+]
+
 const SecondPage = () => (
   <article>
     <section>
@@ -161,6 +208,50 @@ const SecondPage = () => (
         <Bar dataKey="pv" fill="#5C7CFA" />
         <Bar dataKey="uv" fill="#364FC7" barSize={3} />
       </BarChart>
+    </GraphContainer>
+    <hr />
+    <GraphContainer>
+      <PieChart width={730} height={550}>
+        <Pie
+          data={data2}
+          dataKey="pv"
+          nameKey="name"
+          cx="50%"
+          cy="50%"
+          innerRadius={60}
+          outerRadius={80}
+          fill="#5C7CFA"
+          paddingAngle={3}
+          labelLine={{ stroke: brandGray.gray04 }}
+          label={({
+            cx,
+            cy,
+            midAngle,
+            innerRadius,
+            outerRadius,
+            value,
+            index,
+          }) => {
+            const RADIAN = Math.PI / 180
+            const radius = 32 + innerRadius + (outerRadius - innerRadius)
+            const x = cx + radius * Math.cos(-midAngle * RADIAN)
+            const y = cy + radius * Math.sin(-midAngle * RADIAN)
+
+            return (
+              <text
+                x={x}
+                y={y}
+                fill={brandGray.gray08}
+                textAnchor={x > cx ? "start" : "end"}
+                dominantBaseline="central"
+              >
+                {data[index].name} ({value})
+              </text>
+            )
+          }}
+        />
+        />
+      </PieChart>
     </GraphContainer>
   </article>
 )
